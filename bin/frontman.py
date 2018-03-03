@@ -14,7 +14,7 @@ def index():
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Reem+Kufi" rel="stylesheet">
     <link href="static/base.css" rel="stylesheet">
     <script src="static/index.js" type="text/javascript"></script>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
