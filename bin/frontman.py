@@ -10,8 +10,8 @@ def index():
     <meta charset="utf8">
     <title>Matrimonio - Francesco &amp; Francesca 2018 Edition</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Reem+Kufi" rel="stylesheet">
-    <link href="base.css" rel="stylesheet">
-    <script src="index.js" type="text/javascript"></script>
+    <link href="static/base.css" rel="stylesheet">
+    <script src="static/index.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width">
 </head>
 
