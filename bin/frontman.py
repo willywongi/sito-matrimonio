@@ -10,21 +10,20 @@ def index():
 
 <head>
     <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Matrimonio - Francesco &amp; Francesca 2018 Edition</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Reem+Kufi" rel="stylesheet">
     <link href="static/base.css" rel="stylesheet">
     <script src="static/index.js" type="text/javascript"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
     <nav>
         <ul>
-            <li><a href="#via">Via!</a></li>
-            <li><a href="#cerimonia">Cerimonia</a></li>
-            <li><a href="#ricevimento">Ricevimento</a></li>
-            <li><a href="#lista">Lista</a></li>
-            <li><a href="#imprevisti">Imprevisti</a></li>
+            <li class="via"><a href="#via">Via!</a></li>
+            <li class="cerimonia"><a href="#cerimonia">Cerimonia</a></li>
+            <li class="ricevimento"><a href="#ricevimento">Ricevimento</a></li>
+            <li class="lista"><a href="#lista">Lista</a></li>
+            <li class="probabilita"><a href="#probabilita">Probabilit&agrave;</a></li>
         </ul>
     </nav>
     <section id="via">
@@ -36,30 +35,28 @@ def index():
     <section id="cerimonia">
         <div>
             <h3>Cerimonia</h3>
-            <p>Si svolger&agrave; Sabato 26 maggio 2018 alle 16,30 nella chiesa di San Vincenzo a Modena (Corso Canalgrande 77).
+            <p>Si svolger&agrave; Sabato 26 maggio 2018 alle 16,30 nella chiesa di <a href="https://www.google.it/maps/place/Corso+Canalgrande,+77,+41121+Modena+MO/@44.6461055,10.9274861,17z/data=!3m1!4b1!4m5!3m4!1s0x477fef159fe01cb1:0x6a0fa3ebf817e017!8m2!3d44.6461055!4d10.9296748">
+                San Vincenzo a Modena (Corso Canalgrande 77)</a>.
             </p>
         </div>
     </section>
     <section id="ricevimento">
         <div>
             <h3>Ricevimento</h3>
-            <p>Festeggeremo presso il "Golf Club di San Valentino"</p>
+            <p>Festeggeremo presso il "San Valentino Golf Club" in <a href="https://www.google.it/maps/place/San+Valentino+Golf+Club/@44.5132514,10.7331624,17z/data=!4m8!1m2!2m1!1svia+Telarolo+12,+42014+San+Valentino+di+Castellarano+(RE)!3m4!1s0x0:0xbefc8ff8eafbfaf2!8m2!3d44.5332951!4d10.687807">
+                via Telarolo 12, 42014 San Valentino di Castellarano (RE)</a>.</p>
         </div>
     </section>
     <section id="lista">
         <div>
-            <h3>Lista</h3>
-            <p>Per chi volesse contribuire, apriremo una lista presso l'agenzia viaggi XXX</p>
+            <h3>IMPREVISTI</h3>
+            <p><em>More info coming soon!</em></p>
         </div>
     </section>
-    <section id="imprevisti">
-        <div>
-            <h3>Imprevisti</h3>
-            <p>Vuoi ricevere notifiche riguardo al matrimonio?</p>
-        </div>
+    <section id="probabilita">
+        <img src="static/monopoly_kitten_640.jpg">
     </section>
 </body>
-
 </html>"""
 	return page
 
