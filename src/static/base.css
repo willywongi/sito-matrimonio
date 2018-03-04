@@ -3,14 +3,17 @@ html {
 }
 
 :root {
-    --blue: rgb(21, 50, 168);
-    --red: rgb(235, 33, 43);
+    --blue: #254EA2;
+    --green: #13A65C;
+    --yellow: #FAE90D;
+    --red: #EF3924;
+    --orange: #F57F23;
     --teal: rgb(199, 220, 220);
     --black: #333;
 }
 
 html {
-    background-color: var(--teal);
+    background-color: #FFF;
 }
 
 body {
@@ -24,24 +27,41 @@ nav {
     top: 0;
     bottom: 0;
     width: 20%;
-    display: flex;
-    align-items: center;
-    
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+nav ul li {
+    height: 20%;
+    background-image: linear-gradient(to left, #254EA2 0%, var(--blue) 30%, var(--teal) 0%);
+    display: flex;
+    align-items: center;
+    border-width: 2px;
+    border-color: #000;
+    border-style: solid solid none solid;
+    font-size: 24px;
+    box-sizing: border-box;
+}
+nav ul li:first-child a {
+    text-transform: uppercase;
+    color: var(--red);
+}
+nav ul li:last-child {
+    border-bottom-style: solid;
 }
 
 nav a {
     text-decoration: none;
-    color: #FFF;
+    color: black;
     display: block;
-    padding: 1em 1em 1em 3em;
-    background-image: linear-gradient(to right, var(--blue) 0%, var(--blue) 2.2em, transparent 2.2em);
+    padding: 1em 3em 1em 1em;
     margin: 4px 0;
-    text-shadow: 0 0 1px #000;
 }
 
 section {
@@ -64,18 +84,21 @@ section > div {
     border-style: solid;
     border-color: rgb(221, 196, 69) rgb(209, 184, 58) rgb(209, 184, 58) rgb(221, 196, 69);
     background-color: rgb(221, 194, 60);
+    background-image: radial-gradient(ellipse at bottom, rgb(221, 194, 60) 50%, rgb(197, 171, 38));
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(80, 80, 80, .5);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
     min-height: 20%;
     text-align: center;
 }
 section:nth-child(2n-1) > div {
-    border-color: rgb(221, 194, 60) rgb(218, 161, 57) rgb(218, 161, 57) rgb(221, 194, 60);
-    background-color: rgb(221, 165, 60)
+    border-color: rgb(221, 194, 60) rgb(218, 161, 57) rgb(218, 161, 57) rgb(202, 180, 68);
+    background-color: rgb(221, 165, 60);
+    background-image: radial-gradient(ellipse at bottom, rgb(221, 173, 83) 50%, rgb(221, 165, 60));
 }
 
 #via > div {
     width: 70%;
+    background-image: radial-gradient(ellipse at bottom, #FFF 50%, #F0F0f0);
     background-color: #FEFEFE;
     border-color: #FFF;
 }
@@ -105,6 +128,12 @@ h3 {
     font-weight: 400;
 }
 
+@media screen and (orientation: landscape) and (max-width: 1280px) {
+    nav ul li {
+        font-size: 16px;
+    }
+}
+
 @media screen and (orientation: portrait) {
     nav {
         top: 10%;
@@ -119,9 +148,39 @@ h3 {
         flex-direction: row;
     }
     nav ul li {
-        display: inline-block;
+        display: flex;
         flex-grow: 1;
+        align-items: end;
         text-align: center;
+        height: 10em;
+        background-image: linear-gradient(to bottom, rgb(24, 59, 129) 0%, var(--blue) 30%, var(--teal) 0%);
+        border-width: 2px;
+        border-color: #000;
+        border-style: solid none solid solid;
+        font-size: 16px;
+    }
+    nav ul li:last-child {
+        border-right-style: solid;
+    }
+    nav ul li a {
+        padding: 0;
+        transform-origin: left center;
+        position: relative;
+        left: 50%;
+        transform: rotateZ(-90deg);
+    }
+    nav ul li:first-child {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+    nav ul li:first-child a {
+        position: initial;
+        left: auto;
+        font-size: 20px;
+        font-weight: 400;
+        transform: rotateZ(0);
     }
     section {
         width: 100%;
@@ -147,9 +206,6 @@ h3 {
         width: 20%;
     }
     nav ul li a {
-        transform-origin: center center;
-        transform: rotateZ(-90deg);
-        text-align: left;
     }
     section>div,
     #via>div {
