@@ -1,4 +1,7 @@
-from flask import Flask
+import os
+import sys
+
+from flask import Flask, send_file
 from flask_sslify import SSLify
 
 app = Flask(__name__)
@@ -6,57 +9,12 @@ sslify = SSLify(app)
 
 @app.route('/')
 def index():
-	page = """<html>
+	return send_file(os.path.join('..', 'src', 'index.html'), mimetype='text/html')
 
-<head>
-    <meta charset="utf8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Matrimonio - Francesco &amp; Francesca 2018 Edition</title>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Reem+Kufi" rel="stylesheet">
-    <link href="static/base.css" rel="stylesheet">
-    <script src="static/index.js" type="text/javascript"></script>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li class="via"><a href="#via">Via!</a></li>
-            <li class="cerimonia"><a href="#cerimonia">Cerimonia</a></li>
-            <li class="ricevimento"><a href="#ricevimento">Ricevimento</a></li>
-            <li class="lista"><a href="#lista">Lista</a></li>
-            <li class="probabilita"><a href="#probabilita">Probabilit&agrave;</a></li>
-        </ul>
-    </nav>
-    <section id="via">
-        <div>
-            <h1>Matrimonio</h1>
-            <h2>Francesco &amp; Francesca 2018 Edition</h2>
-        </div>
-    </section>
-    <section id="cerimonia">
-        <div>
-            <h3>Cerimonia</h3>
-            <p>Si svolger&agrave; Sabato 26 maggio 2018 alle 16,30 nella chiesa di <a href="https://www.google.it/maps/place/Corso+Canalgrande,+77,+41121+Modena+MO/@44.6461055,10.9274861,17z/data=!3m1!4b1!4m5!3m4!1s0x477fef159fe01cb1:0x6a0fa3ebf817e017!8m2!3d44.6461055!4d10.9296748">
-                San Vincenzo a Modena (Corso Canalgrande 77)</a>.
-            </p>
-        </div>
-    </section>
-    <section id="ricevimento">
-        <div>
-            <h3>Ricevimento</h3>
-            <p>Festeggeremo presso il "San Valentino Golf Club" in <a href="https://www.google.it/maps/place/San+Valentino+Golf+Club/@44.5132514,10.7331624,17z/data=!4m8!1m2!2m1!1svia+Telarolo+12,+42014+San+Valentino+di+Castellarano+(RE)!3m4!1s0x0:0xbefc8ff8eafbfaf2!8m2!3d44.5332951!4d10.687807">
-                via Telarolo 12, 42014 San Valentino di Castellarano (RE)</a>.</p>
-        </div>
-    </section>
-    <section id="lista">
-        <div>
-            <h3>IMPREVISTI</h3>
-            <p><em>More info coming soon!</em></p>
-        </div>
-    </section>
-    <section id="probabilita">
-        <img src="static/monopoly_kitten_640.jpg">
-    </section>
-</body>
-</html>"""
-	return page
 
+if __name__ == "__main__":
+	try:
+		port = int(sys.argv[1])
+	except IndexError:
+		port = 5000
+	app.run(host='0.0.0.0', port=port, debug=True)
