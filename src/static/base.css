@@ -2,16 +2,6 @@ html {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-:root {
-    --blue: #254EA2;
-    --green: #13A65C;
-    --yellow: #FAE90D;
-    --red: #EF3924;
-    --orange: #F57F23;
-    --teal: rgb(199, 220, 220);
-    --black: #333;
-}
-
 html {
     background-color: #FFF;
 }
@@ -39,7 +29,7 @@ nav ul {
 
 nav ul li {
     height: 20%;
-    background-image: linear-gradient(to left, #254EA2 0%, var(--blue) 30%, var(--teal) 0%);
+    background-image: linear-gradient(to left, #254EA2 0%, #254EA2 30%, rgb(199, 220, 220) 0%);
     display: flex;
     align-items: center;
     border-width: 2px;
@@ -50,7 +40,7 @@ nav ul li {
 }
 nav ul li:first-child a {
     text-transform: uppercase;
-    color: var(--red);
+    color: #EF3924;
 }
 nav ul li:last-child {
     border-bottom-style: solid;
@@ -105,7 +95,7 @@ section:nth-child(2n-1) > div {
 
 h1 {
     text-transform: uppercase;
-    background-color: var(--red);
+    background-color: #EF3924;
     color: #fff;
     font-size: 82px;
     font-family: "Josefin Sans", sans-serif;
@@ -153,7 +143,7 @@ h3 {
         align-items: end;
         text-align: center;
         height: 10em;
-        background-image: linear-gradient(to bottom, rgb(24, 59, 129) 0%, var(--blue) 30%, var(--teal) 0%);
+        background-image: linear-gradient(to bottom, rgb(24, 59, 129) 0%, #254EA2 30%, rgb(199, 220, 220) 0%);
         border-width: 2px;
         border-color: #000;
         border-style: solid none solid solid;
