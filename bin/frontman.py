@@ -12,7 +12,7 @@ def index():
 	return send_file(os.path.join('..', 'src', 'index.html'), mimetype='text/html')
 
 @app.route('/istruzioni')
-def index():
+def istruzioni():
 	return send_file(os.path.join('..', 'src', 'lista_aiuto.html'), mimetype='text/html')
 
 
