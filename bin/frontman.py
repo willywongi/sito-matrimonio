@@ -11,6 +11,10 @@ sslify = SSLify(app)
 def index():
 	return send_file(os.path.join('..', 'src', 'index.html'), mimetype='text/html')
 
+@app.route('/istruzioni')
+def index():
+	return send_file(os.path.join('..', 'src', 'lista_aiuto.html'), mimetype='text/html')
+
 
 if __name__ == "__main__":
 	try:

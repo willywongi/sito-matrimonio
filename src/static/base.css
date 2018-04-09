@@ -65,6 +65,12 @@ section {
     justify-content: center;
 }
 
+section a,
+section a:visited,
+section a:active {
+    color: #254EA2;
+}
+
 section > div {
     width: 25%;
     min-width: 20em;
