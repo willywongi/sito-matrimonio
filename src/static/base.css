@@ -92,6 +92,16 @@ section:nth-child(2n-1) > div {
     background-image: radial-gradient(ellipse at bottom, rgb(221, 173, 83) 50%, rgb(221, 165, 60));
 }
 
+#footer {
+    flex-direction: column;
+}
+
+#footer p {
+    font-size: small; 
+    text-align: center;
+    color: rgb(199, 220, 220);
+}
+
 #via > div {
     width: 70%;
     background-image: radial-gradient(ellipse at bottom, #FFF 50%, #F0F0f0);
